@@ -11,4 +11,5 @@ export interface Product {
     stock: number;
     vendible: number;
     imagenes: Image[];
+    subcategory_nombre?: string;
   }
