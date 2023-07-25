@@ -18,7 +18,13 @@ export class KartService {
   }
 
   public eliminarProducto(product:Product){
-    this.listaProductos.pop
+    const index = this.listaProductos.indexOf(product);
+    if (index !== -1) {
+      this.listaProductos.splice(index, 1);
+      console.log('Se eliminó el producto ' + product.id_producto + ' del carrito.');
+    } else {
+      console.log('El producto ' + product.id_producto + ' no está en el carrito.');
+    }
   }
 
 constructor() { }

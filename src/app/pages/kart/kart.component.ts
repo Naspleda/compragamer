@@ -76,7 +76,7 @@ export class KartComponent implements OnInit {
 
   mostrarNombresImagenes() {
     this.products.forEach((product) => {
-      const nombresImagenes = this.obtenerNombreImagenes(product);
+    this.obtenerNombreImagenes(product);
     });
   }
 

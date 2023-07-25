@@ -8,7 +8,6 @@ const routes: Routes = [
   { path:'', component:HomeComponent,},
   { path:'kart', component:KartComponent, },
   { path:'login', component:LoginComponent },
-
   { path:'**', redirectTo:'', },
 
 ];
