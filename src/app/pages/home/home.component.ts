@@ -5,6 +5,7 @@ import { SubcategoryService } from 'src/app/core/services/subcategory.service';
 import { Product } from 'src/common/models/domain/product';
 import { Subcategory } from 'src/common/models/domain/subcategory';
 import { forkJoin } from 'rxjs/internal/observable/forkJoin';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,12 +16,22 @@ export class HomeComponent implements OnInit {
 
   public products:Product[]= [];
   public subcategories:Subcategory[] = [];
+  public cartCount: number =0;
 
   constructor(
+    private router: Router,
     private productService:ProductService, 
     private subcategoryService:SubcategoryService,
     private kartService:KartService,
     ) {}
+
+    redirectToKart() {
+      this.router.navigate(['/kart']);
+    }
+
+    redirectToLogin() {
+      this.router.navigate(['/login']);
+    }
 
   getProducts(){
     this.productService.getProducts().subscribe(data => {
@@ -34,8 +45,14 @@ export class HomeComponent implements OnInit {
       });
   }
 
+  getSubcategoryName(subcategoryId: number): string {
+    const subcategory = this.subcategories.find((subcat) => subcat.id === subcategoryId);
+    return subcategory ? subcategory.nombre : 'Subcategoría no encontrada';
+  }
+
   agregarProductoAlCarrito(product:Product){
     this.kartService.agregarProducto(product);
+    this.cartCount++;
   }
 
   obtenerSubcategoriaDelProducto(subcategoriaId:number){
