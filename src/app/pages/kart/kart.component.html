@@ -1,3 +1,16 @@
+<!-- Header -->
+<p>
+  <mat-toolbar color="primary">
+    <span>Angular Test</span>
+    <span class="example-spacer"></span>
+    <span class="login" (click)="redirectToLogin()">Login</span>
+      <button>
+        <mat-icon matBadge="{{cartCount}}" matBadgeColor="warn" (click)="redirectToKart()">shop</mat-icon>
+      </button> 
+  </mat-toolbar>
+</p>
+
+
 <p>
   kart works!
 </p>
