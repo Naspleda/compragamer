@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { KartComponent } from './kart/kart.component';
 import { MaterialModule } from '../material.module';
 import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from '../core/header/header.component';
+import { PruebaComponent } from '../core/prueba/prueba.component';
 
 
 @NgModule({
@@ -11,7 +13,7 @@ import { LoginComponent } from './login/login.component';
     CommonModule,
     MaterialModule
   ],
-  exports: [HomeComponent, KartComponent, LoginComponent],
-  declarations: [HomeComponent, KartComponent, LoginComponent]
+  exports: [HomeComponent, KartComponent, LoginComponent, HeaderComponent, PruebaComponent],
+  declarations: [HomeComponent, KartComponent, LoginComponent, HeaderComponent, PruebaComponent]
 })
 export class PagesModule { }

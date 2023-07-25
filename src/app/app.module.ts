@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PagesModule } from './pages/pages.module';
 
 import { MaterialModule } from './material.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { MaterialModule } from './material.module';
     MaterialModule,
     HttpClientModule,
     PagesModule,
+    NgbModule,
 
   ],
   providers: [],

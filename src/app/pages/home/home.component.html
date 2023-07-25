@@ -1,6 +1,6 @@
 
 <!-- Header -->
-<p>
+<!-- <p>
   <mat-toolbar color="primary">
     <span>Compra Gamer</span>
     <span class="example-spacer"></span>
@@ -9,10 +9,18 @@
         <mat-icon matBadge="{{cartCount}}" matBadgeColor="warn" (click)="redirectToKart()">shop</mat-icon>
       </button> 
   </mat-toolbar>
-</p>
+</p> -->
+<app-header></app-header>
+<br>
+<div class="container-fluid">
+  <button>
+    <mat-icon matBadge="{{cartCount}}" matBadgeColor="warn" (click)="redirectToKart()">shop</mat-icon>
+  </button> 
+</div><br>
+
 
 <!-- Card Content -->
-<div class="container">
+<div class="container-fluid">
     <mat-grid-list cols="4">
       <ng-container *ngFor="let product of products"> 
         <mat-grid-tile>
@@ -26,7 +34,7 @@
             <mat-card-content>
               <p class="precio">${{product.precio}}</p>
             </mat-card-content>
-            
+
             <mat-card-actions align="end">
               <button mat-button (click)="agregarProductoAlCarrito(product)">Agregar</button>
             </mat-card-actions>
