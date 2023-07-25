@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NgIf} from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
@@ -9,11 +9,12 @@ import {NgIf} from '@angular/common';
 })
 export class LoginComponent implements OnInit {
   hide = true;
-  email = new FormControl('', [Validators.required, Validators.email]);
-
+  email:FormControl;
   
 
-  constructor() { }
+  constructor() { 
+    this.email = new FormControl('', [Validators.required, Validators.email]);
+  }
 
   getErrorMessage() {
     if (this.email.hasError('required')) {

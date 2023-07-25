@@ -2,7 +2,7 @@
 <!-- Header -->
 <p>
   <mat-toolbar color="primary">
-    <span>Angular Test</span>
+    <span>Compra Gamer</span>
     <span class="example-spacer"></span>
     <span class="login" (click)="redirectToLogin()">Login</span>
       <button>
@@ -22,9 +22,11 @@
             <mat-card-header>
               <mat-card-title>{{product.nombre}}</mat-card-title>
             </mat-card-header>
+
             <mat-card-content>
               <p class="precio">${{product.precio}}</p>
             </mat-card-content>
+            
             <mat-card-actions align="end">
               <button mat-button (click)="agregarProductoAlCarrito(product)">Agregar</button>
             </mat-card-actions>
