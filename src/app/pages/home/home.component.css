@@ -8,5 +8,5 @@
   width: 100%;
  /* Ajusta el tamaño de la imagen según tu preferencia */
   object-fit: cover; /* Hace que la imagen ocupe todo el espacio sin distorsionarse */
-  padding: 50px; /* Agregamos un margen inferior a la imagen */
+  padding: 5vh; /* Agregamos un margen inferior a la imagen */
 }

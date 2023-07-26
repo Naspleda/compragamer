@@ -16,7 +16,9 @@ export class HomeComponent implements OnInit {
 
   public products:Product[]= [];
   public subcategories:Subcategory[] = [];
-  public cartCount: number =0;
+  public cartCount: number = this.kartService.cantidadProductos();
+  public productosFiltrados:Product[]= [];
+  buscarTexto: string = '';
 
   constructor(
     private router: Router,
@@ -52,7 +54,7 @@ export class HomeComponent implements OnInit {
 
   agregarProductoAlCarrito(product:Product){
     this.kartService.agregarProducto(product);
-    this.cartCount++;
+    this.cartCount= this.kartService.cantidadProductos();
   }
 
   obtenerSubcategoriaDelProducto(subcategoriaId:number){
@@ -87,6 +89,17 @@ export class HomeComponent implements OnInit {
 
     return `${baseUrl}${imageName}${additionalUrl}`;
   }
+
+  filtrarProductos() {
+    this.productosFiltrados = this.products.filter(product => {
+      return product.nombre.toLowerCase().includes(this.buscarTexto.toLowerCase());
+    });
+  }
+
+  filtrarSubcategoria(id:number){
+      const a = this.products.filter((product) => product.id_subcategoria === id);
+      this.productosFiltrados = a
+  }
   
 
   ngOnInit() {
@@ -98,6 +111,8 @@ export class HomeComponent implements OnInit {
       this.subcategories = subcategories;
       this.mostrarNombresImagenes();
       this.getNombre(this.products);
+      this.productosFiltrados = this.products;
+      console.log(this.products)
     });
   }
 }

@@ -6,12 +6,15 @@ import { MaterialModule } from '../material.module';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from '../core/header/header.component';
 import { PruebaComponent } from '../core/prueba/prueba.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [HomeComponent, KartComponent, LoginComponent, HeaderComponent, PruebaComponent],
   declarations: [HomeComponent, KartComponent, LoginComponent, HeaderComponent, PruebaComponent]

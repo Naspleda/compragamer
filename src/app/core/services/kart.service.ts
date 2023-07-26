@@ -12,6 +12,10 @@ export class KartService {
     return this.listaProductos;
   }
 
+  public cantidadProductos(){
+    return this.listaProductos.length
+  }
+
   public agregarProducto(product:Product){
     this.listaProductos.push(product)
     console.log('se añadio el producto '+product.id_producto)
