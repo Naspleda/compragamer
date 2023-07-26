@@ -15,7 +15,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  exports: [HomeComponent, KartComponent, LoginComponent, HeaderComponent],
-  declarations: [HomeComponent, KartComponent, LoginComponent, HeaderComponent]
+
+  exports: [
+    HomeComponent, 
+    KartComponent, 
+    LoginComponent, 
+    HeaderComponent
+  ],
+
+  declarations: [
+    HomeComponent, 
+    KartComponent, 
+    LoginComponent, 
+    HeaderComponent
+  ]
 })
 export class PagesModule { }
