@@ -60,6 +60,11 @@ export class KartComponent implements OnInit {
     this.cartCount++;
   }
 
+  eliminarProducto(producto: Product) {
+    this.kartService.eliminarProducto(producto);
+    this.obtenerCarrito();
+  }
+
   obtenerSubcategoriaDelProducto(subcategoriaId:number){
     return this.subcategoryService.getSubcategoriaPorId(subcategoriaId)
   }
