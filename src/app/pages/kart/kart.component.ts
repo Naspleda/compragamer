@@ -17,6 +17,7 @@ export class KartComponent implements OnInit {
   public products:Product[]= [];
   public subcategories:Subcategory[] = [];
   public cartCount: number =0;
+  public carrito:Product[]= [];
 
   constructor(
     private router: Router,
@@ -37,6 +38,10 @@ export class KartComponent implements OnInit {
     this.productService.getProducts().subscribe(data => {
       this.products = data;     
       });
+  }
+
+  obtenerCarrito(){
+    this.carrito=this.kartService.getKart();
   }
 
   getSubcategories(){
@@ -98,6 +103,7 @@ export class KartComponent implements OnInit {
       this.subcategories = subcategories;
       this.mostrarNombresImagenes();
       this.getNombre(this.products);
+      this.obtenerCarrito();
     });
   }
 }

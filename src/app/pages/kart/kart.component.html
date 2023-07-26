@@ -2,6 +2,6 @@
 <app-header></app-header>
 
 
-<p>
-  kart works!
+<p *ngFor="let producto of carrito">
+  {{producto.nombre}}
 </p>
