@@ -5,7 +5,6 @@ import { KartComponent } from './kart/kart.component';
 import { MaterialModule } from '../material.module';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from '../layout/header/header.component';
-import { PruebaComponent } from '../core/prueba/prueba.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -16,7 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  exports: [HomeComponent, KartComponent, LoginComponent, HeaderComponent, PruebaComponent],
-  declarations: [HomeComponent, KartComponent, LoginComponent, HeaderComponent, PruebaComponent]
+  exports: [HomeComponent, KartComponent, LoginComponent, HeaderComponent],
+  declarations: [HomeComponent, KartComponent, LoginComponent, HeaderComponent]
 })
 export class PagesModule { }
