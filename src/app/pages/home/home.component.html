@@ -1,10 +1,6 @@
-
-<app-header></app-header>
 <br>
 <div class="container-fluid">
-  <button>
-    <mat-icon matBadge="{{cartCount}}" matBadgeColor="warn" (click)="redirectToKart()">shop</mat-icon>
-  </button> 
+    <mat-icon matBadge="{{cartCount}}" matBadgeColor="warn" (click)="redirectToKart()">shopping_cart</mat-icon>
 </div><br>
 
 <ul class="list-group" *ngFor="let subcategory of subcategories">

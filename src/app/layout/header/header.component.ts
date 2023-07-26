@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { KartService } from '../services/kart.service';
+import { KartService } from '../../core/services/kart.service';
 import { Router } from '@angular/router';
 import { Product } from 'src/common/models/domain/product';
-import { ProductService } from '../services/product.service';
-import { SubcategoryService } from '../services/subcategory.service';
+import { ProductService } from '../../core/services/product.service';
+import { SubcategoryService } from '../../core/services/subcategory.service';
 import { Subcategory } from 'src/common/models/domain/subcategory';
 import { forkJoin } from 'rxjs/internal/observable/forkJoin';
 
