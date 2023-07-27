@@ -8,12 +8,28 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
+  nombre: string='';
+  apellido: string= '';
+  dni: string= '';
+  email: FormControl = new FormControl('', [Validators.email]);
+  telefono: string= '';
+  password: string= '';
   hide = true;
-  email:FormControl;
   
 
   constructor() { 
     this.email = new FormControl('', [Validators.required, Validators.email]);
+  }
+
+  onLogin() {
+    // Guardar los campos en el LocalStorage
+    localStorage.setItem('nombre', this.nombre);
+    localStorage.setItem('apellido', this.apellido);
+    localStorage.setItem('dni', this.dni);
+    localStorage.setItem('email', this.email.value);
+    localStorage.setItem('telefono', this.telefono);
+    localStorage.setItem('password', this.password);
   }
 
   getErrorMessage() {
