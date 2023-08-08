@@ -6,6 +6,7 @@ import { MaterialModule } from '../material.module';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from '../layout/header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from '../layout/footer/footer.component';
 
 
 @NgModule({
@@ -20,14 +21,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent, 
     KartComponent, 
     LoginComponent, 
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
 
   declarations: [
     HomeComponent, 
     KartComponent, 
     LoginComponent, 
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class PagesModule { }
